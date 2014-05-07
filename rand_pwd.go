@@ -7,7 +7,8 @@ import (
 
 var StdChars = []byte("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+,.?/:;{}[]`~")
 
-func rand(length int, chars []byte) string {
+func rand(length int) string {
+    chars := StdChars
     new_pword := make([]byte, length)
     random_data := make([]byte, length+(length/4)) // storage for random bytes.
     clen := byte(len(chars))
